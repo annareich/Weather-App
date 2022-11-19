@@ -1,0 +1,71 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+form {
+  display: inline;
+}
+
+button {
+  padding: 2px 6px;
+  border-width: 1px;
+  border-style: outset;
+  border-image: initial;
+  background-color: #2fd2f2;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #2fd2f2;
+  border: 1px solid #2fd2f2;
+}
+
+button.location-button {
+  border-radius: 2px;
+}
+
+.container {
+  color: grey;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 5px 40px;
+  border-radius: 5px;
+}
+.header {
+  font-size: 36px;
+  padding: 10px;
+}
+.card {
+  font-size: 18px;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 10px 8px;
+}
+.city {
+  font-size: 36px;
+  padding: 20px 0px 0px 0px;
+}
+.time {
+  font-size: 24px;
+  padding: 0px 0px 0px 0px;
+}
+.weather-image {
+  font-size: 50px;
+}
+.temperature {
+  font-size: 36px;
+  padding: 0px 0px 20px 0px;
+}
+.degree-c,
+.degree-f {
+  text-decoration: none;
+  color: grey;
+  font-size: 20px;
+}
+.row {
+  padding: 5px 0px;
+}

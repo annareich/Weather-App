@@ -1,11 +1,6 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
 }
-
-form {
-  display: inline;
-}
-
 button {
   padding: 2px 6px;
   border-width: 1px;
@@ -15,29 +10,19 @@ button {
   transition: all 200ms ease;
   cursor: pointer;
 }
-
 button:hover {
   background: rgba(255, 255, 255, 0.3);
   color: #2fd2f2;
   border: 1px solid #2fd2f2;
 }
-
 button.location-button {
   border-radius: 2px;
 }
-
-.container {
-  color: grey;
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-  max-width: 700px;
-  padding: 5px 40px;
-  border-radius: 5px;
+form {
+  display: inline;
 }
-.header {
-  font-size: 36px;
-  padding: 10px;
+footer {
+  padding: 20px;
 }
 .card {
   font-size: 18px;
@@ -49,16 +34,14 @@ button.location-button {
   font-size: 36px;
   padding: 20px 0px 0px 0px;
 }
-.time {
-  font-size: 24px;
-  padding: 0px 0px 0px 0px;
-}
-.weather-image {
-  font-size: 50px;
-}
-.temperature {
-  font-size: 36px;
-  padding: 0px 0px 20px 0px;
+.container {
+  color: grey;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 5px 40px;
+  border-radius: 5px;
 }
 .degree-c,
 .degree-f {
@@ -66,6 +49,25 @@ button.location-button {
   color: grey;
   font-size: 20px;
 }
+.github-link {
+  color: #2fd2f2;
+  text-decoration: none;
+}
+.header {
+  font-size: 36px;
+  padding: 10px;
+}
 .row {
   padding: 5px 0px;
+}
+.temperature {
+  font-size: 36px;
+  padding: 0px 0px 20px 0px;
+}
+.time {
+  font-size: 24px;
+  padding: 0px 0px 0px 0px;
+}
+.weather-image {
+  font-size: 50px;
 }

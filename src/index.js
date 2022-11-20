@@ -23,17 +23,26 @@ function formatDate(timestamp) {
 
 function showWeather(response) {
   let city = response.data.name;
+  let wind = Math.round(response.data.wind.speed);
+  let weatherDescription = response.data.weather[0].description;
   let currentCityElement = document.querySelector("#current-city");
   let currentTemperatureElement = document.querySelector(
     "#current-temperature-value"
   );
   let currentTimeElement = document.querySelector("#current-time");
+  let currentWindspeedElement = document.querySelector("#current-windspeed");
+  let currentWeatherDescriptionElement = document.querySelector(
+    "#current-weather-description"
+  );
+  console.log(response.data);
 
   celciusTemperature = response.data.main.temp;
 
   currentTemperatureElement.innerHTML = Math.round(celciusTemperature);
   currentCityElement.innerHTML = city;
   currentTimeElement.innerHTML = formatDate(response.data.dt * 1000);
+  currentWindspeedElement.innerHTML = `Wind: ${wind} km/h`;
+  currentWeatherDescriptionElement.innerHTML = weatherDescription;
 }
 
 function searchCity(event) {
@@ -44,6 +53,12 @@ function searchCity(event) {
   let unit = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&units=${unit}&appid=${apiKey}`;
   axios.get(`${apiUrl}`).then(showWeather);
+}
+
+function search(city) {
+  let apiKey = "0f8bc384a7c31b717a18cfe38a95ae06";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showWeather);
 }
 
 function handlePosition(position) {
@@ -113,3 +128,5 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", setUnitCelcius);
 
 let celciusTemperature = null;
+
+search("Stockholm");

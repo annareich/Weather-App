@@ -49,10 +49,15 @@ h1 {
   text-align: center;
   display: block;
 }
-
 .current-temperature {
-  font-size: 36px;
-  padding: 0px 0px 20px 0px;
+  font-size: 50px;
+}
+.current-temperature-unit {
+  position: relative;
+  text-decoration: none;
+  color: grey;
+  font-size: 16px;
+  top: -24px;
 }
 .current-temperature-unit .active {
   color: grey;
@@ -64,11 +69,26 @@ h1 {
 }
 .current-time {
   font-size: 24px;
-  padding: 30px 0px 0px 0px;
+  padding: 5px 0px 0px 0px;
   font-family: monospace;
+}
+.current-weather-description {
+  text-align: left;
+}
+
+.current-weather-description::first-letter {
+  text-transform: capitalize;
+}
+.current-weather {
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
 .current-weather-icon {
   font-size: 50px;
+  text-align: right;
+}
+.current-windspeed {
+  text-align: left;
 }
 .forecast-temperatures {
   font-size: 20px;
@@ -82,24 +102,23 @@ h1 {
 }
 .github-link {
   color: #845600;
-
   transition: all 200ms ease;
 }
 .github-link:hover {
   color: #f2d481;
+}
+.link {
+  color: #d38900;
+  transition: all 200ms ease;
+}
+.link:hover {
+  color: #845600;
 }
 .row {
   padding: 10px 0px;
 }
 .sun {
   color: #dea734;
-}
-.current-temperature-unit {
-  position: relative;
-  text-decoration: none;
-  color: grey;
-  font-size: 16px;
-  top: -14px;
 }
 .weather-box {
   margin: 0 auto;

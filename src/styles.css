@@ -18,9 +18,7 @@ button:hover {
   color: #2fd2f2;
   border: 1px solid #2fd2f2;
 }
-button.location-button {
-  border-radius: 2px;
-}
+
 form {
   display: inline;
 }
@@ -50,14 +48,14 @@ h1 {
   display: block;
 }
 .current-temperature {
-  font-size: 50px;
+  font-size: 64px;
 }
 .current-temperature-unit {
   position: relative;
   text-decoration: none;
   color: grey;
   font-size: 16px;
-  top: -24px;
+  top: -34px;
 }
 .current-temperature-unit .active {
   color: grey;
@@ -80,8 +78,8 @@ h1 {
   text-transform: capitalize;
 }
 .current-weather {
-  padding-top: 13px;
-  padding-bottom: 13px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 .current-weather-icon {
   text-align: right;

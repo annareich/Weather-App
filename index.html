@@ -24,15 +24,22 @@
       <h1>ALWAYS <span class="sun">SUN</span>DAY</h1>
       <div class="weather-box">
         <form id="search-form">
-          <input
-            type="text"
-            id="city-input"
-            placeholder="🔎 Enter a city"
-            required
-          />
-          <input type="submit" value="Search" />
+          <div class="row justify-content-center">
+            <div class="col-8">
+              <input
+                type="text"
+                id="city-input"
+                placeholder="🔎 Enter a city"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="col-2">
+              <input type="submit" value="Search" class="btn btn-secondary" />
+            </div>
+          </div>
         </form>
-        <button class="location-button">📍</button>
+        <button class="location-button btn btn-info">📍</button>
         <div class="current-city" id="current-city"></div>
         <div class="current-time" id="current-time"></div>
         <div class="row justify-content-center">

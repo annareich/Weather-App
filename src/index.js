@@ -1,10 +1,37 @@
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let weekdayName = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let day = weekdayName[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
+}
+
 function showWeather(response) {
   let city = response.data.name;
-  let currentCity = document.querySelector(".current-city");
-  currentCity.innerHTML = city;
+  let currentCityElement = document.querySelector("#current-city");
+  currentCityElement.innerHTML = city;
   let temperature = Math.round(response.data.main.temp);
-  let cityTemperature = document.querySelector(".current-temperature-value");
-  cityTemperature.innerHTML = `${temperature}`;
+  let currentTemperatureElement = document.querySelector(
+    "#current-temperature-value"
+  );
+  currentTemperatureElement.innerHTML = `${temperature}`;
+  let currentTimeElement = document.querySelector("#current-time");
+  currentTimeElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function searchCity() {
@@ -45,8 +72,11 @@ let weekdayName = [
 let day = weekdayName[now.getDay()];
 let hours = now.getHours();
 let minutes = now.getMinutes();
-if (minutes <= 9) {
-  minutes = "0" + minutes;
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+if (hours < 10) {
+  hours = `0${hours}`;
 }
 let timeAnnouncement = document.querySelector(".current-time");
 timeAnnouncement.innerHTML = `${day} ${hours}:${minutes}`;

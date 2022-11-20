@@ -21,63 +21,66 @@
   </head>
   <body>
     <div class="container">
-      <div class="header">Always Sun-Day</div>
+      <h1>ALWAYS <span class="sun">SUN</span>DAY</h1>
+      <div class="weather-box">
+        <form id="search-form">
+          <input
+            type="text"
+            id="city-input"
+            placeholder="🔎 Enter a city"
+            required
+          />
+          <input type="submit" value="Search" />
+        </form>
+        <button class="location-button">📍</button>
 
-      <form id="search-form">
-        <input
-          type="text"
-          id="city-input"
-          placeholder="🔎 Enter a city"
-          required
-        />
-        <input type="submit" value="Search" />
-      </form>
-      <button class="location-button">📍</button>
-      <div class="city">Stockholm</div>
-      <div class="time">Tuesday 17:43</div>
-      <div class="weather-image">🌦</div>
-      <div class="temperature">
-        <span class="temperature-value">22</span
-        ><span class="units"> °C | °F</span>
-      </div>
-      <div class="card">
-        <div class="row">
-          <div class="col">Fri</div>
-          <div class="col">🌤</div>
-          <div class="col">23°C</div>
+        <div class="city">Stockholm</div>
+        <div class="time">Tuesday 17:43</div>
+        <div class="weather-image">🌦</div>
+        <div class="temperature">
+          <span class="temperature-value">22</span
+          ><span class="units"> °C | °F</span>
         </div>
-        <div class="row">
-          <div class="col">Sat</div>
-          <div class="col">☀️</div>
-          <div class="col">26°C</div>
-        </div>
-        <div class="row">
-          <div class="col">Sun</div>
-          <div class="col">☀️</div>
-          <div class="col">28°C</div>
-        </div>
-        <div class="row">
-          <div class="col">Mon</div>
-          <div class="col">🌧</div>
-          <div class="col">21°C</div>
-        </div>
-        <div class="row">
-          <div class="col">Tue</div>
-          <div class="col">⛈</div>
-          <div class="col">23°C</div>
+        <div class="card">
+          <div class="row">
+            <div class="col">Fri</div>
+            <div class="col">🌤</div>
+            <div class="col">23°C</div>
+          </div>
+          <div class="row">
+            <div class="col">Sat</div>
+            <div class="col">☀️</div>
+            <div class="col">26°C</div>
+          </div>
+          <div class="row">
+            <div class="col">Sun</div>
+            <div class="col">☀️</div>
+            <div class="col">28°C</div>
+          </div>
+          <div class="row">
+            <div class="col">Mon</div>
+            <div class="col">🌧</div>
+            <div class="col">21°C</div>
+          </div>
+          <div class="row">
+            <div class="col">Tue</div>
+            <div class="col">⛈</div>
+            <div class="col">23°C</div>
+          </div>
         </div>
       </div>
+
+      <footer>
+        <a
+          href="https://github.com/annareich/Weather-App"
+          target="_blank"
+          title="Open-source code on Github"
+          class="github-link"
+          >Open-source code</a
+        >
+        by Anna Reich
+      </footer>
     </div>
-    <footer>
-      <a
-        href="https://github.com/annareich/Weather-App"
-        target="_blank"
-        title="Open-source code on Github"
-        class="github-link"
-        >Open-source code</a
-      >
-      by Anna Reich
-    </footer>
     <script src="src/index.js"></script>
   </body>
 </html>

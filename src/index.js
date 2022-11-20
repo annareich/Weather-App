@@ -34,6 +34,9 @@ function showWeather(response) {
   let currentWeatherDescriptionElement = document.querySelector(
     "#current-weather-description"
   );
+  let currentWeatherIconElement = document.querySelector(
+    "#current-weather-icon"
+  );
   console.log(response.data);
 
   celciusTemperature = response.data.main.temp;
@@ -43,6 +46,17 @@ function showWeather(response) {
   currentTimeElement.innerHTML = formatDate(response.data.dt * 1000);
   currentWindspeedElement.innerHTML = `Wind: ${wind} km/h`;
   currentWeatherDescriptionElement.innerHTML = weatherDescription;
+  currentWeatherIconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  currentWeatherIconElement.setAttribute(
+    "alt",
+    response.data.weather[0].description
+  );
+  console.log(
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function searchCity(event) {

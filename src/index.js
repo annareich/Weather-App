@@ -1,10 +1,10 @@
 function showWeather(response) {
   let city = response.data.name;
-  let currentCity = document.querySelector(".city");
+  let currentCity = document.querySelector(".current-city");
   currentCity.innerHTML = city;
   let temperature = Math.round(response.data.main.temp);
-  let cityTemperature = document.querySelector(".temperature-value");
-  cityTemperature.innerHTML = `${temperature}°C`;
+  let cityTemperature = document.querySelector(".current-temperature-value");
+  cityTemperature.innerHTML = `${temperature}`;
 }
 
 function searchCity() {
@@ -48,7 +48,7 @@ let minutes = now.getMinutes();
 if (minutes <= 9) {
   minutes = "0" + minutes;
 }
-let timeAnnouncement = document.querySelector(".time");
+let timeAnnouncement = document.querySelector(".current-time");
 timeAnnouncement.innerHTML = `${day} ${hours}:${minutes}`;
 
 let citySearch = document.querySelector("#search-form");

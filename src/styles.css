@@ -36,12 +36,12 @@ h1 {
   color: #fff;
 }
 .card {
-  font-size: 20px;
-  max-width: 350px;
+  max-width: 400px;
   margin: 0 auto;
   padding: 10px 8px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
-.city {
+.current-city {
   font-size: 36px;
   padding: 20px 0px 0px 0px;
 }
@@ -49,13 +49,36 @@ h1 {
   text-align: center;
   display: block;
 }
+
+.current-temperature {
+  font-size: 36px;
+  padding: 0px 0px 20px 0px;
+}
+.current-time {
+  font-size: 24px;
+  padding: 30px 0px 0px 0px;
+  font-family: monospace;
+}
+.current-weather-icon {
+  font-size: 50px;
+}
+.forecast-temperatures {
+  font-size: 20px;
+}
+.forecast-weather-icons {
+  font-size: 50px;
+}
+.forecast-weekdays {
+  font-size: 20px;
+  font-family: monospace;
+}
 .github-link {
-  color: #f2d481;
+  color: #845600;
 
   transition: all 200ms ease;
 }
 .github-link:hover {
-  color: #000;
+  color: #f2d481;
 }
 .row {
   padding: 10px 0px;
@@ -63,15 +86,7 @@ h1 {
 .sun {
   color: #dea734;
 }
-.temperature {
-  font-size: 36px;
-  padding: 0px 0px 20px 0px;
-}
-.time {
-  font-size: 24px;
-  padding: 0px 0px 0px 0px;
-}
-.units {
+.current-temperature-unit {
   position: relative;
   text-decoration: none;
   color: grey;
@@ -83,8 +98,5 @@ h1 {
   max-width: 600px;
   padding: 20px 40px;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-.weather-image {
-  font-size: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
 }

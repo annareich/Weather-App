@@ -23,27 +23,47 @@
     <div class="container">
       <h1>ALWAYS <span class="sun">SUN</span>DAY</h1>
       <div class="weather-box">
-        <form id="search-form">
-          <div class="row justify-content-center">
-            <div class="col-8">
-              <input
-                type="text"
-                id="city-input"
-                placeholder="🔎 Enter a city"
-                class="form-control"
-                required
-              />
+        <div class="card-search-bar">
+          <div class="row no-padding">
+            <div class="col no-padding justify-content-center">
+              <form id="search-form">
+                <div class="row no-padding">
+                  <div class="col no-padding justify-content-center">
+                    <input
+                      type="text"
+                      id="city-input"
+                      placeholder="🔎 Enter a city"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                  <div class="col-3">
+                    <input
+                      type="submit"
+                      value="Search"
+                      class="btn btn-primary w-100"
+                    />
+                  </div>
+                </div>
+              </form>
             </div>
-            <div class="col-2">
-              <input type="submit" value="Search" class="btn btn-secondary" />
+            <div class="col-2 no-padding">
+              <div class="row no-padding">
+                <div class="col no-padding">
+                  <button
+                    class="location-button btn btn-outline-secondary w-100"
+                  >
+                    Here
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </form>
-        <button class="location-button btn btn-info">📍</button>
+        </div>
         <div class="current-city" id="current-city"></div>
         <div class="current-time" id="current-time"></div>
         <div class="row justify-content-center">
-          <div class="col-3">
+          <div class="col-4">
             <img
               src=""
               alt="Clear"
@@ -51,7 +71,7 @@
               id="current-weather-icon"
             />
           </div>
-          <div class="col-3">
+          <div class="col-4">
             <span class="current-temperature">
               <span
                 class="current-temperature-value"
@@ -63,7 +83,7 @@
               >
             </span>
           </div>
-          <div class="col-3 current-weather">
+          <div class="col-4 current-weather">
             <div
               class="current-weather-description"
               class="text-left"
@@ -74,41 +94,7 @@
         </div>
 
         <div class="card">
-          <div class="row">
-            <div class="col"><span class="forecast-weekdays">Fri</span></div>
-            <div class="col"><span class="forecast-weekdays">Sat</span></div>
-            <div class="col"><span class="forecast-weekdays">Sun</span></div>
-            <div class="col"><span class="forecast-weekdays">Mon</span></div>
-            <div class="col"><span class="forecast-weekdays">Tue</span></div>
-          </div>
-          <div class="row">
-            <div class="col"><span class="forecast-weather-icons">🌤</span></div>
-            <div class="col">
-              <span class="forecast-weather-icons">☀️</span>
-            </div>
-            <div class="col">
-              <span class="forecast-weather-icons">☀️</span>
-            </div>
-            <div class="col"><span class="forecast-weather-icons">🌧</span></div>
-            <div class="col"><span class="forecast-weather-icons">⛈</span></div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <span class="forecast-temperatures">23°C</span>
-            </div>
-            <div class="col">
-              <span class="forecast-temperatures">26°C</span>
-            </div>
-            <div class="col">
-              <span class="forecast-temperatures">28°C</span>
-            </div>
-            <div class="col">
-              <span class="forecast-temperatures">21°C</span>
-            </div>
-            <div class="col">
-              <span class="forecast-temperatures">23°C</span>
-            </div>
-          </div>
+          <div class="forecast-weather" id="forecast-weather"></div>
         </div>
       </div>
 

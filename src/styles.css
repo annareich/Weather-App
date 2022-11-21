@@ -2,7 +2,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   background: linear-gradient(#f2d481, #d38900);
   margin: 10px 0px auto;
-  color: grey;
+  color: #3c366b;
 }
 button {
   padding: 2px 6px;
@@ -33,10 +33,36 @@ h1 {
   font-family: monospace;
   color: #fff;
 }
+.btn-outline-secondary {
+  color: #635ba1;
+  border-color: #635ba1;
+  border-radius: 10px;
+}
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: #635ba1;
+}
+.btn-primary {
+  background-color: #635ba1;
+  border-color: #635ba1;
+  border-radius: 10px;
+}
+.btn-primary:hover {
+  background-color: #3c366b;
+  border-color: #3c366b;
+}
 .card {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 10px 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 0;
+  border-radius: 10px;
+}
+.card-search-bar {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px 0px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 .current-city {
@@ -52,17 +78,29 @@ h1 {
 }
 .current-temperature-unit {
   position: relative;
-  text-decoration: none;
-  color: grey;
+
+  color: #3c366b;
   font-size: 16px;
   top: -34px;
 }
+.current-temperature-unit .link {
+  text-decoration: none;
+  color: #3c366b;
+  transition: all 200ms ease;
+  opacity: 0.6;
+}
+.current-temperature-unit .link:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
 .current-temperature-unit .active {
-  color: grey;
+  color: #3c366b;
   cursor: default;
   text-decoration: none;
+  opacity: 1;
 }
 .current-temperature-unit .active:hover {
+  color: #3c366b;
   text-decoration: none;
 }
 .current-time {
@@ -90,12 +128,20 @@ h1 {
 .forecast-temperatures {
   font-size: 20px;
 }
-.forecast-weather-icons {
-  font-size: 50px;
+.forecast-temperatures-min {
+  opacity: 0.6;
+}
+.forecast-weather {
+  text-align: center;
 }
 .forecast-weekdays {
   font-size: 20px;
   font-family: monospace;
+}
+.form-control {
+  border-color: #fff;
+  color: #3c366b;
+  border-radius: 10px;
 }
 .github-link {
   color: #845600;
@@ -104,23 +150,24 @@ h1 {
 .github-link:hover {
   color: #f2d481;
 }
-.link {
-  color: #d38900;
-  transition: all 200ms ease;
-}
-.link:hover {
-  color: #845600;
-}
+
 .row {
   padding: 10px 0px;
+  margin: 0 auto;
 }
 .sun {
   color: #dea734;
 }
 .weather-box {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 700px;
   padding: 20px 40px;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.5);
+}
+.no-padding {
+  padding: 0;
+}
+.search-box {
+  max-width: 500px;
 }

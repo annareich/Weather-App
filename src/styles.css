@@ -58,6 +58,7 @@ h1 {
   background-color: rgba(255, 255, 255, 0.3);
   border: 0;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 .card-search-bar {
   max-width: 500px;
@@ -67,6 +68,7 @@ h1 {
 .current-city {
   font-size: 36px;
   padding: 20px 0px 0px 0px;
+  text-transform: uppercase;
 }
 .container {
   text-align: center;
@@ -118,6 +120,11 @@ h1 {
   padding-top: 25px;
   padding-bottom: 25px;
 }
+.current-weather-box {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
 .current-weather-icon {
   text-align: right;
 }
@@ -159,8 +166,8 @@ h1 {
 }
 .weather-box {
   margin: 0 auto;
-  max-width: 700px;
-  padding: 20px 40px;
+  max-width: 600px;
+  padding: 30px 30px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.5);
 }
